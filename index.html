@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alan do Amaral | Backend Python</title>
+  <meta name="description" content="Portfólio de Alan do Amaral, estudante de Engenharia de Software na UDF, focado em desenvolvimento backend com Python.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐍</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="theme.js"></script>
+</head>
+<body>
+  <canvas id="trail" aria-hidden="true"></canvas>
+
+  <header class="nav">
+    <a class="logo" href="#inicio">alan<span>.py</span></a>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#foco">Foco</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#terminal">Terminal</a>
+      <a href="#contato">Contato</a>
+      <button id="theme-toggle" class="toggle" aria-label="Alternar tema claro e escuro"><span class="ico"></span></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-text">
+        <p class="comment"># olá, mundo. eu sou</p>
+        <h1>Alan do<br>Amaral<span class="caret">_</span></h1>
+        <p class="lead">Estudante de Engenharia de Software que quer construir o que roda por trás da tela: APIs, bancos de dados e sistemas em <strong>Python</strong>.</p>
+        <div class="actions">
+          <a class="btn primary" href="#projetos">Ver projetos</a>
+          <a class="btn" href="https://github.com/alanamaral-dev" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="mailto:alanamarallaf@gmail.com">Enviar e-mail</a>
+        </div>
+      </div>
+
+      <div class="hero-code">
+        <div class="window">
+          <div class="bar"><i></i><i></i><i></i><span>main.py</span></div>
+          <pre><code id="code"></code></pre>
+        </div>
+        <div class="resp" id="resp"><b>200 OK</b> <span>GET /alan</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="sobre">
+      <h2>Sobre mim</h2>
+      <div class="about">
+        <p>Tenho 21 anos, nasci em Brasília e cursar Engenharia de Software na UDF me mostrou onde mais gosto de estar: na lógica, na estrutura e nos dados que sustentam um sistema. Meu objetivo profissional é atuar com <strong>desenvolvimento backend em Python</strong>.</p>
+        <dl class="dict">
+          <div><dt>nome</dt><dd class="s">"Alan do Amaral"</dd></div>
+          <div><dt>idade</dt><dd class="n">21</dd></div>
+          <div><dt>cidade</dt><dd class="s">"Brasília, DF"</dd></div>
+          <div><dt>curso</dt><dd class="s">"Engenharia de Software"</dd></div>
+          <div><dt>faculdade</dt><dd class="s">"UDF"</dd></div>
+          <div><dt>foco</dt><dd class="s">"Backend com Python"</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section" id="foco">
+      <h2>Áreas de foco</h2>
+      <div class="grid">
+        <article class="card"><h3>Python</h3><p>A linguagem central da minha carreira: código claro, legível e bem organizado.</p><code>def resolver(problema): ...</code></article>
+        <article class="card"><h3>APIs REST</h3><p>Rotas, validação de dados e respostas pensadas para quem consome o serviço.</p><code>@app.get("/usuarios")</code></article>
+        <article class="card"><h3>Bancos de dados</h3><p>Modelagem e consultas SQL para guardar e recuperar informação com eficiência.</p><code>SELECT * FROM talentos;</code></article>
+        <article class="card"><h3>Arquitetura</h3><p>Separar responsabilidades para que o sistema cresça sem virar bagunça.</p><code>class Service(Repository): ...</code></article>
+        <article class="card"><h3>Testes e Git</h3><p>Versionamento e testes automatizados para mudar o código com segurança.</p><code>assert funciona() is True</code></article>
+        <article class="card"><h3>Segurança</h3><p>Autenticação, senhas protegidas e cuidado com os dados de quem usa o sistema.</p><code>hash(senha, salt=...)</code></article>
+      </div>
+    </section>
+
+    <section class="section" id="projetos">
+      <h2>Projetos</h2>
+      <div class="grid two">
+        <a class="card proj" href="https://github.com/alanamaral-dev/controleFinanceiro" target="_blank" rel="noopener">
+          <h3>controleFinanceiro</h3>
+          <p>Aplicação em Python de controle financeiro, organizada em módulos separados: dados, funções, menus e ponto de entrada.</p>
+          <div class="tags"><span>Python</span><span>Módulos</span><span>Terminal</span></div>
+          <code>git clone controleFinanceiro</code>
+        </a>
+        <a class="card proj" href="https://github.com/alanamaral-dev/estoque-py" target="_blank" rel="noopener">
+          <h3>estoque-py</h3>
+          <p>Sistema de controle de estoque escrito em Python.</p>
+          <div class="tags"><span>Python</span><span>Estoque</span></div>
+          <code>git clone estoque-py</code>
+        </a>
+      </div>
+      <a class="more" href="https://github.com/alanamaral-dev" target="_blank" rel="noopener">Ver todos no GitHub</a>
+    </section>
+
+    <section class="section" id="terminal">
+      <h2>Terminal</h2>
+      <p class="term-hint">Converse com o meu portfólio. Digite um comando ou toque em um atalho.</p>
+      <div class="window term">
+        <div class="bar"><i></i><i></i><i></i><span>alan@portfolio: ~</span></div>
+        <div class="term-body" id="term-body" data-native-scroll>
+          <div id="term-out"></div>
+          <label class="prompt"><span class="p">alan@portfolio</span><span class="d">:~$</span>
+            <input id="term-in" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Digite um comando">
+          </label>
+        </div>
+      </div>
+      <div class="chips">
+        <button class="btn" data-cmd="help">help</button>
+        <button class="btn" data-cmd="sobre">sobre</button>
+        <button class="btn" data-cmd="projetos">projetos</button>
+        <button class="btn" data-cmd="contato">contato</button>
+        <button class="btn" data-cmd="tema">tema</button>
+      </div>
+    </section>
+
+    <section class="section contact" id="contato">
+      <h2>Vamos conversar?</h2>
+      <p>Aberto a oportunidades de estágio e projetos em backend.</p>
+      <a class="mail" href="mailto:alanamarallaf@gmail.com">alanamarallaf@gmail.com</a>
+      <div class="actions center">
+        <div class="actions center"><button id="copy" class="btn">Copiar e-mail</button><a class="btn primary" href="https://github.com/alanamaral-dev" target="_blank" rel="noopener">GitHub</a></div>
+      <p class="foot">© <span class="year"></span> Alan do Amaral. Feito em Brasília.</p>
+        <a class="btn" href="https://github.com/alanamaral-dev" target="_blank" rel="noopener">github.com/alanamaral-dev</a>
+      </div>
+    </section>
+  </main>
+
+
+  <script src="cursor.js" defer></script>
+  <script src="terminal.js" defer></script>
+  <script src="scroll.js" defer></script>
+  <script src="main.js" defer></script>
+</body>
+</html>
